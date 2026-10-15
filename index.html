@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AshenSoul by Rising Moon Studios</title>
+<meta name="description" content="AshenSoul is a mythology-inspired strategy card game: collect creatures, build your deck and battle. By Rising Moon Studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0b10;
+    --panel: #17131c;
+    --line: #2c2433;
+    --text: #e9e3da;
+    --muted: #a69c90;
+    --ember: #e0893a;
+    --gold: #d9b26a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(224,137,58,.18), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 88px 0 56px; }
+  .studio {
+    font-size: 13px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--muted); margin: 0 0 18px;
+  }
+  h1 {
+    font-family: Cinzel, Georgia, serif; font-weight: 800;
+    font-size: clamp(44px, 10vw, 76px); line-height: 1; margin: 0;
+    color: var(--gold);
+    text-shadow: 0 0 32px rgba(224,137,58,.35);
+  }
+  .tagline { font-size: 19px; color: var(--text); margin: 22px auto 0; max-width: 520px; }
+  .stores { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+  .btn {
+    display: inline-block; padding: 13px 22px; border-radius: 10px;
+    text-decoration: none; font-weight: 500; font-size: 15px;
+    border: 1px solid var(--line); color: var(--text); background: var(--panel);
+  }
+  .btn:hover { border-color: var(--ember); }
+  .btn.primary { background: var(--ember); border-color: var(--ember); color: #1a1008; }
+  .btn.primary:hover { filter: brightness(1.08); }
+  section { border-top: 1px solid var(--line); padding: 44px 0; }
+  h2 {
+    font-family: Cinzel, Georgia, serif; font-weight: 600; font-size: 22px;
+    color: var(--gold); margin: 0 0 14px; letter-spacing: .03em;
+  }
+  p { margin: 0 0 12px; color: var(--muted); }
+  ul { margin: 0; padding-left: 20px; color: var(--muted); }
+  li { margin-bottom: 6px; }
+  a { color: var(--ember); }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; font-size: 14px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="studio">Rising Moon Studios</p>
+      <h1>AshenSoul</h1>
+      <p class="tagline">A mythology-inspired strategy card game. Collect creatures, build your deck and outplay your rivals.</p>
+      <div class="stores">
+        <a class="btn primary" href="https://apps.apple.com/app/id6809594588">Download on the App Store</a>
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul">Get it on Google Play</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>About the game</h2>
+      <p>AshenSoul draws on ancient mythology to bring a world of strange and powerful creatures to your hand. Open packs, grow your collection and shape a deck that fits the way you like to fight.</p>
+      <ul>
+        <li>Collect over a hundred unique creature cards</li>
+        <li>Build and tune your own deck</li>
+        <li>Combine traits for powerful synergies</li>
+        <li>Battle through a map of increasingly tough enemies</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <p>Questions, feedback or a bug to report? Message us on Instagram at <a href="https://instagram.com/rising_moon_studios">@rising_moon_studios</a>.</p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>AshenSoul shows ads through Google AdMob. To serve and measure ads, Google may collect device information such as the advertising ID. You can read how Google uses this data in the <a href="https://policies.google.com/technologies/partner-sites">Google partner sites policy</a>, and you can reset or limit ad tracking in your device settings.</p>
+    </section>
+
+    <footer>© 2026 Rising Moon Studios</footer>
+  </div>
+</body>
+</html>
