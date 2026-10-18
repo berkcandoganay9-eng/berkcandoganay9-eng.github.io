@@ -5,6 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get AshenSoul</title>
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#0d0b10">
+<style>
+  html { background:#0d0b10; }
+  body { visibility:hidden; }
+</style>
+<noscript><style>body { visibility:visible; }</style></noscript>
+<script>
+  // Runs before anything is drawn: phones are sent straight to their store.
+  (function () {
+    var IOS = "https://apps.apple.com/app/id6809594588";
+    var ANDROID = "https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul";
+    var ua = navigator.userAgent || "";
+    var isAndroid = /Android/i.test(ua);
+    // iPadOS Safari reports itself as a Mac, so also check for touch support
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+    var target = isAndroid ? ANDROID : (isIOS ? IOS : null);
+    if (target) {
+      window.location.replace(target);
+    } else {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.visibility = "visible";
+      });
+    }
+  })();
+</script>
 <style>
   :root { --bg:#0d0b10; --panel:#17131c; --line:#2c2433; --text:#e9e3da; --muted:#a69c90; --ember:#e0893a; --gold:#d9b26a; --turq:#26d0c0; }
   * { box-sizing: border-box; }
@@ -21,24 +46,11 @@
 <body>
   <div>
     <h1>AshenSoul</h1>
-    <p id="msg">Choose your store:</p>
+    <p>Choose your store:</p>
     <div class="stores">
       <a class="btn" href="https://apps.apple.com/app/id6809594588">App Store</a>
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul">Google Play</a>
     </div>
   </div>
-<script>
-  var IOS = "https://apps.apple.com/app/id6809594588";
-  var ANDROID = "https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul";
-  var ua = navigator.userAgent || "";
-  var isAndroid = /Android/i.test(ua);
-  // iPadOS Safari reports itself as a Mac, so also check for touch support
-  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
-  var target = isAndroid ? ANDROID : (isIOS ? IOS : null);
-  if (target) {
-    document.getElementById("msg").textContent = "Taking you to the store...";
-    window.location.replace(target);
-  }
-</script>
 </body>
 </html>
