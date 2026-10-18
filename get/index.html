@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get AshenSoul</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --bg:#0d0b10; --panel:#17131c; --line:#2c2433; --text:#e9e3da; --muted:#a69c90; --ember:#e0893a; --gold:#d9b26a; --turq:#26d0c0; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center;
+         background: radial-gradient(ellipse at 50% -10%, rgba(224,137,58,.18), transparent 60%), var(--bg);
+         color:var(--text); font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif; padding:20px; }
+  h1 { font-family: Georgia, serif; color:var(--turq); font-size:44px; margin:0 0 8px; }
+  p { color:var(--muted); margin:0 0 24px; }
+  .stores { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  a.btn { padding:13px 22px; border-radius:10px; text-decoration:none; font-weight:500;
+          background:var(--turq); color:#04201d; }
+</style>
+</head>
+<body>
+  <div>
+    <h1>AshenSoul</h1>
+    <p id="msg">Choose your store:</p>
+    <div class="stores">
+      <a class="btn" href="https://apps.apple.com/app/id6809594588">App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul">Google Play</a>
+    </div>
+  </div>
+<script>
+  var IOS = "https://apps.apple.com/app/id6809594588";
+  var ANDROID = "https://play.google.com/store/apps/details?id=com.RisingMoonStudios.AshenSoul";
+  var ua = navigator.userAgent || "";
+  var isAndroid = /Android/i.test(ua);
+  // iPadOS Safari reports itself as a Mac, so also check for touch support
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && navigator.maxTouchPoints > 1);
+  var target = isAndroid ? ANDROID : (isIOS ? IOS : null);
+  if (target) {
+    document.getElementById("msg").textContent = "Taking you to the store...";
+    window.location.replace(target);
+  }
+</script>
+</body>
+</html>
